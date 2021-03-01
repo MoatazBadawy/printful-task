@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">printful-task</string>
+    <string name="about_me">About Me</string>
+    <string name="animals">Animals</string>
+</resources>
