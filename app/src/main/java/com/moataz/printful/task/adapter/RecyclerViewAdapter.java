@@ -43,6 +43,7 @@ public class RecyclerViewAdapter extends RecyclerView.Adapter<RecyclerViewAdapte
                 intent.putExtra("imageURL",images.get(viewHolder.getAdapterPosition()).getImageURL());
                 intent.putExtra("title",images.get(viewHolder.getAdapterPosition()).getTitle());
                 intent.putExtra("description",images.get(viewHolder.getAdapterPosition()).getDescription());
+                intent.putExtra("infoURL",images.get(viewHolder.getAdapterPosition()).getInfoURL());
 
                 context.startActivity(intent);
             }

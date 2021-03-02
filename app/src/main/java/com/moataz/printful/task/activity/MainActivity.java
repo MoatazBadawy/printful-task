@@ -27,7 +27,7 @@ public class MainActivity extends AppCompatActivity {
     RecyclerView recyclerView;
     RecyclerViewAdapter imagesAdapter;
     List<Data> imagesList;
-    private static String JSON_KEY = "https://run.mocky.io/v3/463e89c8-7053-469a-b801-afc7e383b048";
+    private static String JSON_KEY = "https://run.mocky.io/v3/5e475cae-5c29-4f2a-a785-639c86498971";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -52,6 +52,7 @@ public class MainActivity extends AppCompatActivity {
                             images.setTitle(jsonObject.getString("title"));
                             images.setImageURL(jsonObject.getString("imageURL"));
                             images.setDescription(jsonObject.getString("description"));
+                            images.setInfoURL(jsonObject.getString("infoURL"));
                             imagesList.add(images);
 
                         } catch (JSONException e) {

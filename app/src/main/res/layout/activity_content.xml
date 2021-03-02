@@ -7,70 +7,97 @@
     android:background="@color/white"
     tools:context=".activity.ContentActivity">
 
-    <ImageView
-        android:id="@+id/image_content"
+    <FrameLayout
         android:layout_width="match_parent"
-        android:layout_height="@dimen/_180sdp"
-        android:scaleType="centerCrop"
-        app:layout_constraintTop_toTopOf="parent"
-        tools:src="@drawable/ic_launcher_background" />
+        android:layout_height="match_parent">
 
-    <Button
-        android:id="@+id/button_back"
-        android:layout_width="24dp"
-        android:layout_height="24dp"
-        android:layout_alignParentBottom="true"
-        android:layout_marginTop="16dp"
-        android:layout_marginStart="16dp"
-        android:background="@drawable/ic_back_white"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/white">
 
-    <TextView
-        android:id="@+id/title_content"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentStart="true"
-        android:layout_alignParentTop="true"
-        android:layout_marginStart="16dp"
-        android:layout_marginTop="20dp"
-        tools:text="Animal"
-        android:textColor="@color/black"
-        android:textSize="32sp"
-        android:textStyle="bold"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/image_content" />
+            <ImageView
+                android:id="@+id/image_content"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_180sdp"
+                android:scaleType="centerCrop"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:src="@drawable/ic_launcher_background" />
 
-    <TextView
-        android:id="@+id/dic_content"
+            <Button
+                android:id="@+id/button_back"
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:layout_alignParentBottom="true"
+                android:layout_marginTop="16dp"
+                android:layout_marginStart="16dp"
+                android:background="@drawable/ic_back_white"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/title_content"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentTop="true"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="20dp"
+                tools:text="Animal"
+                android:textColor="@color/black"
+                android:textSize="32sp"
+                android:textStyle="bold"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/image_content" />
+
+            <TextView
+                android:id="@+id/dic_content"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentTop="true"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="44dp"
+                android:layout_marginEnd="16dp"
+                android:layout_marginBottom="16dp"
+                android:textSize="18sp"
+                app:layout_constraintBottom_toTopOf="@+id/button_about"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/title_content"
+                tools:text="wooow this a greate app" />
+
+            <Button
+                android:id="@+id/button_about"
+                android:layout_width="261dp"
+                android:layout_height="50dp"
+                android:layout_marginBottom="36dp"
+                android:background="@drawable/button_shape"
+                android:text="@string/about_me"
+                android:textColor="@color/white"
+                android:textSize="18dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.54"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintVertical_bias="0.984" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </FrameLayout>
+
+    <FrameLayout
         android:layout_width="match_parent"
-        android:layout_height="0dp"
-        android:layout_alignParentStart="true"
-        android:layout_alignParentTop="true"
-        android:layout_marginStart="16dp"
-        android:layout_marginTop="44dp"
-        android:layout_marginEnd="16dp"
-        android:layout_marginBottom="16dp"
-        android:textSize="18sp"
-        app:layout_constraintBottom_toTopOf="@+id/button_about"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/title_content"
-        tools:text="wooow this a greate app" />
+        android:layout_height="match_parent">
 
-    <Button
-        android:id="@+id/button_about"
-        android:layout_width="261dp"
-        android:layout_height="50dp"
-        android:layout_marginBottom="36dp"
-        android:background="@drawable/button_shape"
-        android:text="@string/about_me"
-        android:textColor="@color/white"
-        android:textSize="18dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.54"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintVertical_bias="0.984" />
+        <androidx.coordinatorlayout.widget.CoordinatorLayout
+            android:id="@+id/coordinatorLayout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_alignParentBottom="true"
+            app:layout_constraintBottom_toBottomOf="parent">
+
+            <include layout="@layout/bottom_sheet_info" />
+        </androidx.coordinatorlayout.widget.CoordinatorLayout>
+    </FrameLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
