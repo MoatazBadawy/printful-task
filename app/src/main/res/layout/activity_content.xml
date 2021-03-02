@@ -11,7 +11,7 @@
         android:id="@+id/image_content"
         android:layout_width="match_parent"
         android:layout_height="@dimen/_180sdp"
-        android:scaleType="fitXY"
+        android:scaleType="centerCrop"
         app:layout_constraintTop_toTopOf="parent"
         tools:src="@drawable/ic_launcher_background" />
 
@@ -43,15 +43,20 @@
 
     <TextView
         android:id="@+id/dic_content"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
         android:layout_alignParentStart="true"
         android:layout_alignParentTop="true"
+        android:layout_marginStart="16dp"
         android:layout_marginTop="44dp"
-        tools:text="wooow this a greate app"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="16dp"
         android:textSize="18sp"
-        app:layout_constraintStart_toStartOf="@+id/title_content"
-        app:layout_constraintTop_toBottomOf="@+id/title_content" />
+        app:layout_constraintBottom_toTopOf="@+id/button_about"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/title_content"
+        tools:text="wooow this a greate app" />
 
     <Button
         android:id="@+id/button_about"

@@ -27,7 +27,7 @@ public class MainActivity extends AppCompatActivity {
     RecyclerView recyclerView;
     RecyclerViewAdapter imagesAdapter;
     List<Data> imagesList;
-    private static String JSON_KEY = "https://run.mocky.io/v3/a96c71fe-6eaa-439a-a1ce-9857f3eeaed4";
+    private static String JSON_KEY = "https://run.mocky.io/v3/463e89c8-7053-469a-b801-afc7e383b048";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
